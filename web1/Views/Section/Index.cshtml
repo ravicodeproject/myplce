@@ -1,0 +1,75 @@
+﻿@model IEnumerable<web1.Models.Section>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionContent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionMetaDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionMetaKeywords)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionMetaAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionCreatedTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SectionUpdatedTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionContent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionMetaDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionMetaKeywords)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionMetaAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionCreatedTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SectionUpdatedTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

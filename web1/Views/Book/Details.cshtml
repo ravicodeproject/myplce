@@ -1,0 +1,74 @@
+﻿@model web1.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookMetaDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookMetaDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookMetaKeywords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookMetaKeywords)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookMetaAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookMetaAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookCreatedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookCreatedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookUpdatedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookUpdatedTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.BookID  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

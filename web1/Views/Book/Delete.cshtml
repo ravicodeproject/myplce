@@ -1,0 +1,80 @@
+﻿@model web1.Models.Book
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookMetaDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookMetaDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookMetaKeywords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookMetaKeywords)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookMetaAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookMetaAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookCreatedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookCreatedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookUpdatedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookUpdatedTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
